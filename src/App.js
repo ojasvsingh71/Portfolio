@@ -1,6 +1,7 @@
-import React, {  useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import * as THREE from 'three';
 
 function App() {
@@ -46,7 +47,8 @@ function App() {
     <div ref={vantaRef} >
       <Navbar />
       <main className="pt-20">
-        <section id="home"><Hero /></section>
+        <section id="home"><Hero /></section>\
+        <section id="about"><About /></section>
       </main>
     </div>
   );
