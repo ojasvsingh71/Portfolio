@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from "../assets/logo.svg"
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,15 +10,16 @@ const Navbar = () => {
     { href: '#home', label: 'Home' },
     { href: '#about', label: 'About' },
     { href: '#projects', label: 'Projects' },
+    { href: '#resume', label: 'Resume' },
     { href: '#contact', label: 'Contact' },
   ];
 
   return (
     <nav className="bg-transparent backdrop-blur-lg shadow-md fixed w-full z-50 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <img src={logo} alt="Logo" className="h-10 w-10 rounded-full object-cover" />
+        <img src={logo} alt="Logo" className="h-10 object-contain" />
         <div className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">
-          
+
         </div>
 
         <ul className="hidden md:flex space-x-8 text-white font-medium">
@@ -27,10 +28,10 @@ const Navbar = () => {
             <li key={href}>
               <a
                 href={href}
-                className="hover:text-blue-600 relative group transition"
+                className="hover:text-[#BBFBFF] relative group transition"
               >
                 {label}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#8DD8FF] transition-all group-hover:w-full"></span>
               </a>
             </li>
           ))}
@@ -42,9 +43,8 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`md:hidden bg-white transition-all duration-300 px-4 pt-2 pb-4 space-y-3 text-gray-700 font-medium ${
-          isOpen ? 'block' : 'hidden'
-        }`}
+        className={`md:hidden bg-white transition-all duration-300 px-4 pt-2 pb-4 space-y-3 text-gray-700 font-medium ${isOpen ? 'block' : 'hidden'
+          }`}
       >
         {navLinks.map(({ href, label }) => (
           <a
