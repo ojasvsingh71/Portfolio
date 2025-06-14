@@ -2,7 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Contact from './components/Contact';
 import * as THREE from 'three';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   const vantaRef = useRef(null);
@@ -44,13 +46,16 @@ function App() {
   }, []);
 
   return (
-    <div ref={vantaRef} >
-      <Navbar />
-      <main className="pt-20">
-        <section id="home"><Hero /></section>\
-        <section id="about"><About /></section>
-      </main>
-    </div>
+    <BrowserRouter>
+      <div ref={vantaRef} >
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Hero/>} />
+          <Route path='/about' element={<About/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

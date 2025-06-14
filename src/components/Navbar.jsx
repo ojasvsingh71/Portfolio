@@ -7,11 +7,11 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#resume', label: 'Resume' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/projects', label: 'Projects' },
+    { href: 'https://drive.google.com/file/d/1Xs-FHXdGsRF_OqSLOglOW69TRjrAEkld/view?usp=sharing', label: 'Resume' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   return (
