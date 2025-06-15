@@ -4,6 +4,12 @@ Welcome to my **personal developer portfolio** built with **React.js** and **Tai
 
 ---
 
+## 📌 Live Demo
+
+👉 [Portfolio Website (Live)](https://portfolio-rho-bay-95.vercel.app/)
+
+---
+
 ## 🚀 Features
 
 - 🎯 Hero section with animated typewriter introduction
