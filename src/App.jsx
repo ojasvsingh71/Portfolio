@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Contact from './components/Contact';
+import Projects from './components/Projects';
 import * as THREE from 'three';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -50,9 +51,10 @@ function App() {
       <div ref={vantaRef} >
         <Navbar />
         <Routes>
-          <Route path='/' element={<Hero/>} />
-          <Route path='/about' element={<About/>}/>
-          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/' element={<Hero />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/projects' element={<Projects />} />
         </Routes>
       </div>
     </BrowserRouter>

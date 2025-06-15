@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import Lottie from 'lottie-react';
 import Infinity from '../assets/infnity.json';
