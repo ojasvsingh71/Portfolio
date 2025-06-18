@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 function Contact() {
 
@@ -10,7 +11,23 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here (e.g., emailjs or backend API)
+
+        emailjs.send(
+            'service_p5m05o9',
+            'template_5mntav8',
+            form,
+            'mi5mbj2rLBUfNW197'
+        ).then(
+            (res)=>{
+                alert('Message sent successfully!');
+                setForm({name:'',email:'',message:''})
+            },
+            (error)=>{
+                alert('Failed to send massage, please try again later');
+                console.error(error);
+            }
+        )
+
         console.log(form);
     };
 
