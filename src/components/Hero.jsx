@@ -6,7 +6,7 @@ import { SiLeetcode } from 'react-icons/si';
 
 const Hero = () => {
     return (
-        <div className="pl-20 min-h-screen flex flex-col md:flex-row justify-between items-center text-center px-4 bg-gradient-to-b ">
+        <div className="pt-12 pl-4 md:pl-20 min-h-screen flex flex-col md:flex-row justify-between items-center text-center px-4 md:px-20 bg-gradient-to-b ">
             <div className='flex-1 text-left mb-10 md:mb-0'>
                 <div className="mt-6 flex gap-6 text-white mb-10 text-2xl">
                     <a href="https://github.com/ojasvsingh71" className="hover:text-[#4E71FF]">
@@ -29,7 +29,7 @@ const Hero = () => {
 
                 <h1 className="text-4xl  md:text-6xl  text-[#4E71FF]">
                     <Typewriter
-                        words={['MERN Stack Developer', 'Open Source Contributor']}
+                        words={['MERN Stack Developer','DSA Enthusiast', 'Open Source Contributor','Tech Explorer']}
                         loop={true}
                         cursor
                         cursorStyle="_"

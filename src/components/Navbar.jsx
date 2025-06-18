@@ -38,7 +38,7 @@ const Navbar = () => {
         </ul>
 
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={28} className="text-white" /> : <Menu size={28} className="text-white" />}
         </div>
       </div>
 
