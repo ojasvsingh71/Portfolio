@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 function Contact() {
 
     const [form, setForm] = useState({ name: '', email: '', message: '' });
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,19 +13,22 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        setLoading(true);
         emailjs.send(
             'service_p5m05o9',
             'template_5mntav8',
             form,
             'mi5mbj2rLBUfNW197'
         ).then(
-            (res)=>{
+            (res) => {
                 alert('Message sent successfully!');
-                setForm({name:'',email:'',message:''})
+                setForm({ name: '', email: '', message: '' })
+                setLoading(false);
             },
-            (error)=>{
+            (error) => {
                 alert('Failed to send massage, please try again later');
                 console.error(error);
+                setLoading(false)
             }
         )
 
@@ -85,10 +89,11 @@ function Contact() {
                     </div>
 
                     <button
+                        disabled={loading}
                         type="submit"
                         className="w-full text-center hover:bg-white text-blue-400 border border-white  font-semibold py-2 px-4 rounded transition"
                     >
-                        Send Message
+                        {loading ? "Sending Message..." : "Send Message"}
                     </button>
                 </form>
             </div>
