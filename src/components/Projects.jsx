@@ -36,7 +36,7 @@ const Projects = () => {
                             key={index}
                             className=" backdrop-blur border border-white/30 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
                         >
-                            <h3 className="text-2xl font-semibold text-blue-600 mb-2">
+                            <h3 className="text-2xl font-semibold text-blue-300 mb-2">
                                 {project.title}
                             </h3>
                             <p className="text-gray-500 mb-4">{project.description}</p>
@@ -56,7 +56,7 @@ const Projects = () => {
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block w-full text-center hover:bg-white border border-blue-500 text-blue-600 font-semibold py-2 px-4 rounded transition"
+                                className="inline-block w-full text-center hover:bg-white border border-blue-500 text-blue-300 font-semibold py-2 px-4 rounded transition"
                             >
                                 View Project →
                             </a>
