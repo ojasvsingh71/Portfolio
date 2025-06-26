@@ -10,7 +10,7 @@ const Navbar = () => {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
-    { href: 'https://drive.google.com/file/d/1Xs-FHXdGsRF_OqSLOglOW69TRjrAEkld/view?usp=sharing', label: 'Resume' },
+    { href: 'https://drive.google.com/file/d/1c4mVEO_VTXDMfJVz4HL-v5aj5ZQMiqsm/view?usp=sharing', label: 'Resume' },
     { href: '/contact', label: 'Contact' },
   ];
 
