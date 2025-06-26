@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,8 +6,13 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import * as THREE from 'three';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import OptexButton from './components/Optex.button';
+import OptexChatBox from './components/Optex.chatBot';
 
 function App() {
+
+  const [chatOpen, setChatOpen] = useState(false);
+
   const vantaRef = useRef(null);
   const vantaEffect = useRef(null);
 
@@ -56,6 +61,8 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/projects' element={<Projects />} />
         </Routes>
+        {chatOpen && <OptexChatBox onClose={() => setChatOpen(false)} />}
+        <OptexButton onClick={() => setChatOpen(!chatOpen)} />
       </div>
     </BrowserRouter>
   );
