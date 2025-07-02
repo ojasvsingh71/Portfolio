@@ -27,12 +27,20 @@ const OptexChatBox = ({ onClose }) => {
         setLoading(true);
 
         try {
-            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/chat`, { prompt: input });
-            const botMessage = { role: 'bot', text: res.data.reply };
+            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/chat`, {
+                messages: [
+                    ...messages.map(msg => ({
+                        role: msg.role === "user" ? "user" : "assistant",
+                        content: msg.text
+                    })),
+                    { role: "user", content: input }
+                ]
+            });
+            const botMessage = { role: 'assistant', text: res.data.reply };
             setMessages(prev => [...prev, botMessage]);
-        } catch (error) {
-            console.log(error);
-            setMessages(prev => [...prev, { role: 'bot', text: 'Oops! Something went wrong.' }]);
+        } catch (err) {
+            console.log("Chat Error:", err?.response?.data || err.message || err);
+            setMessages(prev => [...prev, { role: 'assistant', text: 'Oops! Something went wrong.' }]);
         } finally {
             setLoading(false);
         }
@@ -56,7 +64,7 @@ const OptexChatBox = ({ onClose }) => {
                             : 'bg-white/30 text-white'
                             }`}
                     >
-                        {msg.role === 'bot' ? (
+                        {msg.role === 'assistant' ? (
                             <ReactMarkdown>{msg.text}</ReactMarkdown>
                         ) : (
                             msg.text
