@@ -27,7 +27,7 @@ const OptexChatBox = ({ onClose }) => {
         setLoading(true);
 
         try {
-            const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/chat`, {
+            const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/chat`, {
                 messages: [
                     ...messages.map(msg => ({
                         role: msg.role === "user" ? "user" : "assistant",
