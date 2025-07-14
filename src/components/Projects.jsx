@@ -3,20 +3,44 @@
 
 const projects = [
     {
+        title: 'DSA Tracker Leaderboard',
+        description:
+            'Full-stack web app to track and display student DSA progress (from LeetCode) via public leaderboards. Encourages consistency with real-time updates.',
+        tech: ['MongoDB', 'Express', 'React', 'Node.js'],
+        link: 'https://github.com/ojasvsingh71/DSA-Tracker-LeaderBoard'
+    },
+    {
+        title: 'MiniMoo - Friendly Chatbot',
+        description:
+            'A quirky, endlessly talkative AI chatbot powered by OpenAI API. Designed for fun, friendly conversations.',
+        tech: ['React', 'Node.js', 'Express', 'OpenAI API'],
+        link: 'https://github.com/ojasvsingh71/MiniMoo'
+    },
+    {
+        title: 'Samaj Sandesh',
+        description:
+            'A community-focused web platform that delivers and displays announcements/news in one place — accessible to all.',
+        tech: ['MongoDB', 'Express', 'React', 'Node.js'],
+        link: 'https://github.com/ojasvsingh71/Samaj-Sandesh'
+    },
+    {
         title: 'Habit Builder App',
-        description: 'A productivity app to build and track habits, built with MERN stack.',
+        description:
+            'A productivity-focused MERN app to help users track and build daily habits with JWT auth and progress tracking.',
         tech: ['MongoDB', 'Express', 'React', 'Node.js'],
         link: 'https://github.com/ojasvsingh71/Habit-Builder'
     },
     {
         title: 'SheGuard - Deepfake Detection',
-        description: 'AI-powered web app to detect deepfake images and videos.',
+        description:
+            'AI-powered web app that detects deepfake images using TensorFlow and Google Vision API. A step toward combating misinformation.',
         tech: ['React', 'Flask', 'TensorFlow'],
         link: 'https://github.com/ojasvsingh71/SheGuard'
     },
     {
         title: 'EcoQuest',
-        description: 'Gamified eco-friendly platform built with React; quests, carbon footprint tracking, rewards.',
+        description:
+            'Gamified React app that rewards users for eco-friendly actions like reducing carbon footprint and completing green quests.',
         tech: ['React'],
         link: 'https://github.com/ojasvsingh71/ecoquest'
     }
